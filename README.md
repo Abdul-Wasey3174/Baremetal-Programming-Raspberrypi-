@@ -1,8 +1,5 @@
 # Task 1 — Bare-Metal Boot on Raspberry Pi 4B
-
-**Course:** CS5600 Operating Systems  
-**Date:** March 6, 2026  
-**Team:** Abdul Wasey Mohammed, Ateeq  
+ 
 
 ## Overview
 
@@ -50,7 +47,6 @@ This produces `kernel8.img`.
 
 Connect a USB-to-TTL serial adapter to GPIO 14 (TXD) and 15 (RXD), then open a terminal at **115200 baud** (e.g. PuTTY on Windows).
 
-## Key Lessons
 
 - The VideoCore GPU controls the early boot sequence on the Pi 4, not the ARM.
 - All four ARM cores start at the same address; the assembly stub parks cores 1–3.
