@@ -1,0 +1,17 @@
+# config.txt - Raspberry Pi 4 firmware configuration for bare-metal Task 1
+
+# Load our 64-bit AArch64 kernel image
+arm_64bit=1
+kernel=kernel8.img
+
+# Lock the core clock to 500 MHz so the mini UART baud rate is stable
+# Without this, the clock can vary and the baud rate drifts from 115200
+core_freq=500
+core_freq_min=500
+
+# Disable Bluetooth (frees up PL011) - mini UART still used on GPIO14/15
+# Uncomment if you switch to PL011 in a later task:
+# dtoverlay=miniuart-bt
+
+# Start in 64-bit EL2 (hypervisor mode) so we can drop to EL1 later
+# (defaults are fine for now; the GPU starts the ARM at EL2 on Pi 4)
